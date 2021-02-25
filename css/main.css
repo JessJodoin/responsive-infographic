@@ -63,11 +63,20 @@ body {
 
 .section-3 {
   background-color: var(--bg-color-med-green);
+  padding: 3rem 1rem;
 }
 
 .history,
 .alloment-rules {
   padding: 1rem;
+}
+
+.card {
+  margin: 0 0 4rem;
+}
+
+.card:last-child {
+  margin: 0 0 2rem;
 }
 
 .alloment-rules {
