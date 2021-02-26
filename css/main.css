@@ -39,7 +39,7 @@ body {
 .wrapper {
   margin-left: auto;
   margin-right: auto;
-  max-width: 52em;
+  max-width: 65em;
   width: 100%;
 }
 
@@ -55,8 +55,8 @@ body {
 
 #logo {
   display: block;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 950px;
+  margin: 2rem auto;
 }
 
 .section-1 {
@@ -73,8 +73,7 @@ body {
   padding: 3rem 1.5rem;
 }
 
-.history,
-.alloment-rules {
+.history {
   padding: 1rem;
 }
 
@@ -94,6 +93,7 @@ body {
 .alloment-rules {
   background-color: var(--color-light-yellow);
   border-radius: 10px;
+  padding: 1.5rem;
 }
 
 .rules-icon {
@@ -242,14 +242,16 @@ p {
 
 .fruit-bush {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   justify-content: center;
   align-items: center;
   grid-template-areas:
-    "bush bush bush bush"
-    "bush bush bush bush"
-    "bush bush bush bush";
+    "bush bush bush bush bush bush"
+    "bush bush bush bush bush bush"
+    "bush bush bush bush bush bush"
+    "bush bush bush bush bush bush"
+    "bush bush bush bush bush bush";
 }
 
 #bush {
@@ -261,75 +263,75 @@ p {
 }
 
 .rhubarb {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
   text-align: center;
 }
 
 .raspberry {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
   text-align: center;
 }
 
 .strawberry {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
   text-align: center;
 }
 
 .pear {
-  grid-column: 4 / -1;
-  grid-row: 1 / 2;
+  grid-column: 5 / 6;
+  grid-row: 2 / 3;
   text-align: center;
 }
 
 
 .blkcurrants {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
   text-align: center;
 }
 
 .gooseberry {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
   text-align: center;
 }
 
 .cherry {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
   text-align: center;
 }
 
 .blueberry {
-  grid-column: 4 / -1;
-  grid-row: 2 / 3;
+  grid-column: 5 / 6;
+  grid-row: 3 / 4;
   text-align: center;
 }
 
 .apple {
-  grid-column: 1 / 2;
-  grid-row: 3 / -1;
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
   text-align: center;
 }
 
 .blkberry {
-  grid-column: 2 / 3;
-  grid-row: 3 / -1;
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
   text-align: center;
 }
 
 .plums {
-  grid-column: 3 / 4;
-  grid-row: 3 / -1;
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
   text-align: center;
 }
 
 .none {
-  grid-column: 4 / -1;
-  grid-row: 3 / -1;
+  grid-column: 5 / 6;
+  grid-row: 4 / 5;
   text-align: center;
 }
 
@@ -359,7 +361,7 @@ footer {
   color: var(--color-light-yellow);
 }
 
-@media only screen and (min-width: 556px) {
+@media only screen and (min-width: 608px) {
 
   .rules-content,
   .benefits-list {
@@ -374,8 +376,10 @@ footer {
     margin: 0 0 .5rem;
   }
 
-  .rules-p {
+  .rules-p,
+  .waitlist-p {
     margin-bottom: 2rem;
+    width: 28em;
   }
 
   .pop-grid {
@@ -396,9 +400,13 @@ footer {
     font-size: .95rem;
   }
 
+  .popular {
+    margin-bottom: 5rem;
+  }
+
 }
 
-@media only screen and (min-width: 808px) {
+@media only screen and (min-width: 960px) {
 
   .s1-grid {
     display: grid;
@@ -417,12 +425,20 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .rules-p {
-    max-width: 17em;
-  }
-
   .card {
     margin: 0;
+  }
+
+  .graph-grid {
+    display: grid;
+    grid-template-columns: 1fr 15em;
+    grid-gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .waitlist-p {
+    width: 14em;
   }
 
   .pop-grid {
