@@ -173,14 +173,14 @@ p {
   fill: currentColor;
 }
 
-.i-40 {
+.num-icons {
   width: 40px;
   height: 40px;
 }
 
-.i-48 {
-  width: 48px;
-  height: 48px;
+.fruit-icons {
+  width: 36px;
+  height: 36px;
 }
 
 .i-125 {
@@ -225,11 +225,23 @@ p {
 }
 
 .icon-title {
-  display: block;
+  display: none;
   font-family: var(--font-secondary);
   font-weight: bold;
   color: var(--color-dark-green);
-  font-size: .9rem;
+  font-size: .8rem;
+  text-shadow: 1px 0 2px var(--color-light-yellow);
+}
+
+.bush-fruits {
+  position: relative;
+}
+
+.bush-fruits:hover .icon-title {
+  display: block;
+  position: absolute;
+  bottom: -15px;
+  left: 5px;
 }
 
 .push {
@@ -252,6 +264,7 @@ p {
     "bush bush bush bush bush bush"
     "bush bush bush bush bush bush"
     "bush bush bush bush bush bush";
+  grid-gap: 1.2rem .5rem;
 }
 
 #bush {
@@ -341,12 +354,16 @@ p {
 
 footer {
   background-color: var(--bg-color-dark-green);
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1.5rem;
   text-align: center;
 }
 
 .footer-link {
-  margin: 0;
+  margin: 0 0 1rem;
+}
+
+small {
+  font-size: .8rem;
 }
 
 .footer-link a {
@@ -359,6 +376,15 @@ footer {
 .footer-link a:hover {
   text-decoration: underline;
   color: var(--color-light-yellow);
+}
+
+@media only screen and (min-width: 400px) {
+
+  .fruit-icons {
+    width: 40px;
+    height: 40px;
+  }
+
 }
 
 @media only screen and (min-width: 608px) {
@@ -391,7 +417,7 @@ footer {
     grid-column: 1 / 2;
   }
 
-  .i-40 {
+  .num-icons {
     width: 50px;
     height: 50px;
   }
@@ -402,6 +428,29 @@ footer {
 
   .popular {
     margin-bottom: 5rem;
+  }
+
+  .icon-title {
+    display: block;
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    color: var(--color-dark-green);
+    font-size: .9rem;
+    text-shadow: none;
+  }
+
+  .bush-fruits:hover .icon-title {
+    display: block;
+    position: static;
+  }
+
+  .bush-fruits {
+    position: static;
+  }
+
+  .fruit-icons {
+    width: 48px;
+    height: 48px;
   }
 
 }
@@ -456,9 +505,22 @@ footer {
     grid-column: 1 / 2;
   }
 
-  .i-40 {
+  .num-icons {
     width: 70px;
     height: 70px;
+  }
+
+  .fruits-section {
+    margin-bottom: 3rem;
+  }
+
+  .fruit-icons {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon-title {
+    font-size: 1.2rem;
   }
 
   .pop-span {
