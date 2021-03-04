@@ -452,8 +452,42 @@ small {
 
 }
 
+.invisible {
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
 .pop_in {
+  opacity: 1;
   animation: pop_in .2s linear;
+}
+
+.rhubarb_in,
+.raspberry_in,
+.strawberry_in,
+.pear_in,
+.blkcurrants_in,
+.gooseberry_in,
+.cherry_in,
+.blueberry_in,
+.apple_in,
+.blkberry_in,
+.plums_in,
+.none_in {
+  opacity: 1;
+  animation: fruit_in .3s linear;
+}
+
+.ear-wiggle {
+  animation: ear-wiggle 1s linear;
+}
+
+.drip {
+  animation: drip 1s linear;
+}
+
+.graph-bars {
+  animation: grow 1s linear;
 }
 
 @keyframes pop_in {
@@ -472,15 +506,68 @@ small {
 
 }
 
-.visible,
-.invisible {
-  opacity: 0.0;
-  transition: opacity 0.5s ease;
+@keyframes fruit_in {
+
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+@keyframes ear-wiggle {
+
+  0% {
+    transform: skewY(0);
+    transform: skewX(0);
+  }
+
+  25% {
+    transform: skewY(-3deg);
+    transform: skewX(1deg);
+  }
+
+  50% {
+    transform: skewY(3deg);
+    transform: skewX(-1deg);
+  }
+
+  75% {
+    transform: skewY(-3deg);
+    transform: skewX(1deg);
+  }
+
+  100% {
+    transform: skewY(0);
+    transform: skewX(0);
+  }
+
+}
+
+@keyframes drip {
+
+  0% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
 }
 
 .visible {
-  opacity: 1.0;
+  opacity: 1;
 }
+
+/* End of Animations */
 
 @media only screen and (min-width: 400px) {
 
